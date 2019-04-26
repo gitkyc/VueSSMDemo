@@ -43,6 +43,9 @@ var ViewMovie = Vue.extend({
         },
         edit:function(movie){
             router.go({name:'editMovie',params:{"movieId":movie.id}});
+        },
+        home:function(){
+            router.replace({name:'home'});
         }
     }
 });
@@ -63,6 +66,9 @@ var NewMovie = Vue.extend({
             }).catch(function(ex){
                 alert("数据保存错误" + ex);
             });
+        },
+        home:function(){
+            router.replace({name:'home'});
         }
     }
 });
@@ -87,6 +93,9 @@ var EditMovie = Vue.extend({
             }).catch(function(ex){
                 alert("保存数据异常：" + ex);
             });
+        },
+        home:function(){
+            router.replace({name:'home'});
         }
     }
 });
@@ -97,6 +106,7 @@ var App = Vue.extend({});
 var router = new VueRouter();
 router.map({
     '/':{
+        name:'home',
         component:Home
     },
     '/movie/:movieId':{
@@ -104,6 +114,7 @@ router.map({
         component:ViewMovie
     },
     '/new':{
+        name:'newMovie',
         component:NewMovie
     },
     '/edit/:movieId':{

@@ -47,6 +47,7 @@
     <p>{{{movie.jianjie}}}</p>
     <a @click="remove(movie)" class="btn btn-danger">删除</a>
     <button class="btn btn-success" @click="edit(movie)">编辑</button>
+    <button class="btn btn-primary" type="button" @click="home()">Home</button>
 </script>
 <script type="vue/template" id="newTemplate">
     <form>
@@ -65,6 +66,7 @@
         <textarea v-model="movie.jianjie" style="height: 100px;width: 90%"></textarea>
         <div class="form-actions">
             <button class="btn btn-primary" type="button" @click="save()">保存</button>
+            <button class="btn btn-primary" type="button" @click="home()">Home</button>
         </div>
     </form>
 </script>
@@ -86,6 +88,7 @@
         <textarea v-model="movie.jianjie" style="height: 100px;width: 90%"></textarea>
         <div class="form-actions">
             <button class="btn btn-primary" type="button" @click="save()">保存</button>
+            <button class="btn btn-primary" type="button" @click="home()">Home</button>
         </div>
     </form>
 </script>
