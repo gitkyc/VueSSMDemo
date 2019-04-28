@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/static/css/bootstrap.min.css">
 </head>
 <body >
     <div class="container" id="app">
         <router-view></router-view>
     </div>
 
-<script src="/static/js/vue.js"></script>
-<script src="/static/js/vue-router.min.js"></script>
-<script src="/static/js/vue-resource.min.js"></script>
+<script src="/app/static/js/vue.js"></script>
+<script src="/app/static/js/vue-router.min.js"></script>
+<script src="/app/static/js/vue-resource.min.js"></script>
 <script type="vue/template" id="tableTemplate">
     <a v-link="{path:'/new'}" class="btn btn-success">添加新影片</a>
         <table class="table">
@@ -29,7 +29,7 @@
             <tbody>
             <template v-for="movie in movies">
                 <tr>
-                    <td><a v-link="'/movie/'+movie.id">{{movie.title}}</a></td>
+                    <td><a v-link="'/app/movie/'+movie.id">{{movie.title}}</a></td>
                     <td>{{movie.rate}}</td>
                     <td>{{movie.daoyan}}</td>
                     <td>{{movie.releaseyear}}</td>
@@ -92,6 +92,6 @@
         </div>
     </form>
 </script>
-<script src="/static/js/app.js"></script>
+<script src="/app/static/js/app.js"></script>
 </body>
 </html>
